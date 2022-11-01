@@ -1,0 +1,200 @@
+﻿referenceDesignatorYearDeployNum,Reviewers,DateReviewed,Status,HITLnotes
+CE02SHBP-LJ01D-06-CTDBPN106.2014.1,"WR,DM",5/1/19,Clear,verified with post-recovery logs and refurb documentation
+CE02SHBP-LJ01D-11-HYDBBA106.2019.6,"WR,DM",1/23/20,Clear,verified with IP address ping
+CE04OSBP-LJ01C-11-HYDBBA105.2019.6,"WR,DM",1/23/20,Clear,verified with IP address ping
+CE04OSPD-DP01B-01-CTDPFL105.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-01-CTDPFL105.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-01-CTDPFL105.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-01-CTDPFL105.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-01-CTDPFL105.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-01-CTDPFL105.2018.6,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-01-CTDPFL105.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-01-CTDPFL105.2019.8,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-02-VEL3DA105.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-02-VEL3DA105.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2018.6,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-02-VEL3DA105.2019.8,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-03-FLCDRA103.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-03-FLCDRA103.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument refurb records, DP team notes"
+CE04OSPD-DP01B-03-FLCDRA103.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-03-FLCDRA103.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-03-FLCDRA103.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-03-FLCDRA103.2018.6,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-03-FLCDRA103.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-03-FLCDRA103.2019.8,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-04-FLNTUA103.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-04-FLNTUA103.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument refurb records, DP team notes"
+CE04OSPD-DP01B-04-FLNTUA103.2016.3,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-04-FLNTUA103.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-04-FLNTUA103.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-04-FLNTUA103.2018.6,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-04-FLNTUA103.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-04-FLNTUA103.2019.8,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B-06-DOSTAD105.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2018.6,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B-06-DOSTAD105.2019.8,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2015.2,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2016.3,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2017.4,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2017.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B.2018.6,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-DP01B.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-DP01B.2019.8,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2015.2,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2016.3,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2017.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-PD01B.2017.5,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2018.6,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+CE04OSPD-PD01B.2019.7,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPD-PD01B.2019.8,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+CE04OSPS-PC01B-05-ZPLSCB102.2018.5,"WR,DM",5/1/19,Clear,verified with post-recovery logs and refurb documentation
+CE04OSPS-PC01B-4D-PCO2WA105.2014.1,"WR,DM",5/1/19,Clear,verified with post-recovery logs and refurb documentation
+CE04OSPS-SF01B-4F-PCO2WA102.2014.1,"WR,DM",5/1/19,Clear,verified with post-recovery logs and refurb documentation
+RS01SBPD-DP01A-01-CTDPFL104.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-01-CTDPFL104.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-01-CTDPFL104.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-01-CTDPFL104.2018.4,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-DP01A-01-CTDPFL104.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-02-VEL3DA103.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-02-VEL3DA103.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-02-VEL3DA103.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-02-VEL3DA103.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-02-VEL3DA103.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-03-FLCDRA102.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-03-FLCDRA102.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-03-FLCDRA102.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-03-FLCDRA102.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-03-FLCDRA102.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-04-FLNTUA102.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-04-FLNTUA102.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-04-FLNTUA102.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-04-FLNTUA102.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-04-FLNTUA102.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-05-OPTAAC102.2015.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-05-OPTAAC102.2016.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-06-DOSTAD104.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-06-DOSTAD104.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-06-DOSTAD104.2016.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-06-DOSTAD104.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A-06-DOSTAD104.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A.2015.2,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-DP01A.2016.3,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-DP01A.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-DP01A.2019.5,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-PD01A.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-PD01A.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPD-PD01A.2016.3,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-PD01A.2018.4,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS01SBPD-PD01A.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS01SBPS-PC01A-08-HYDBBA103.2019.6,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SLBS-LJ01A-09-HYDBBA102.2017.4,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SLBS-MJ01A-05-HYDLFA101.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SLBS-MJ01A-05-OBSBBA102.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SLBS-MJ01A-06-PRESTA101.2014.1,"WR,DM",5/7/19,Clear,put on seafloor in 2013 but not plugged in until 2014; deployment sheet is correct
+RS01SLBS-MJ01A-06-PRESTA101.2018.2,"WR,DM",5/8/19,Clear,put on seafloor in 2016 but not plugged in until 2018; deployment sheet is correct
+RS01SLBS-MJ01A-12-VEL3DB101.2014.1,"WR,DM",5/1/19,Clear,put on seafloor in 2013 but not plugged in until 2014; deployment sheet is correct
+RS01SUM1-LJ01B-05-HYDLFA104.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-05-OBSBBA101.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-06-OBSSPA103.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-06-OBSSPA103.2019.2,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-07-OBSSPA102.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-08-OBSSPA101.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS01SUM1-LJ01B-09-PRESTB102.2017.3,"WR,DM",5/7/19,Clear,put on seafloor in 2016 but not plugged in until 2017; deployment sheet is correct
+RS01SUM1-LJ01B-12-VEL3DB104.2017.3,"WR,DM",5/1/19,Clear,verified with post-recovery logs
+RS01SUM2-MJ01B-00-FLOBNC101.2013.1,"OK,WR",5/12/20,Clear,verified with deployment and dive logs
+RS01SUM2-MJ01B-00-FLOBNC101.2014.2,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNC101.2015.3,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNC101.2016.4,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNC101.2017.5,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNC101.2018.6,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNC101.2019.7,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNM101.2013.1,"OK,WR",5/12/20,Clear,verified with deployment and dive logs
+RS01SUM2-MJ01B-00-FLOBNM101.2014.2,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNM101.2015.3,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNM101.2016.4,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-FLOBNM101.2017.5,"OK,WR",5/12/20,Clear,verified with deployment and dive logs
+RS01SUM2-MJ01B-00-FLOBNM101.2018.6,"OK,WR",5/12/20,Clear,verified with deployment and dive logs
+RS01SUM2-MJ01B-00-FLOBNM101.2019.7,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2014.1,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2015.2,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2016.3,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2017.4,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2018.5,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS01SUM2-MJ01B-00-OSMOIA101.2019.6,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2014.1,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2015.2,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2016.3,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2017.4,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2018.5,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-00-OSMOIA301.2019.6,"WR,KB",5/15/19,Clear,verified with deployment logs and images
+RS03ASHS-MJ03B-05-OBSSPA302.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ASHS-MJ03B-06-OBSSPA301.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ASHS-MJ03B-09-BOTPTA304.2017.3,"WR,DM",5/1/19,Clear,verified with raw data and deployment logs
+RS03AXBS-LJ03A-09-HYDBBA302.2017.4,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03AXBS-LJ03A-12-DOSTAD301.2016.3,"WR,DM",5/1/19,Clear,verified with post-recovery logs
+RS03AXBS-MJ03A-05-HYDLFA301.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03AXBS-MJ03A-05-OBSBBA303.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03AXPD-DP03A-01-CTDPFL304.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-01-CTDPFL304.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-01-CTDPFL304.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-01-CTDPFL304.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-01-CTDPFL304.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-02-VEL3DA303.2014.1,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-02-VEL3DA303.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-02-VEL3DA303.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-02-VEL3DA303.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-02-VEL3DA303.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLCDRA302.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-03-FLCDRA302.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLCDRA302.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLCDRA302.2018.4,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-03-FLCDRA302.2019.5,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-03-FLNTUA302.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-03-FLNTUA302.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLNTUA302.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLNTUA302.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-03-FLNTUA302.2019.5,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-06-DOSTAD304.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A-06-DOSTAD304.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-06-DOSTAD304.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-06-DOSTAD304.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A-06-DOSTAD304.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A.2015.2,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-DP03A.2018.4,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-DP03A.2019.5,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-PD03A.2014.1,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-PD03A.2015.2,"WR,DM,TM",4/29/20,Clear,verified with deployment logs and images
+RS03AXPD-PD03A.2017.3,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-PD03A.2018.4,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPD-PD03A.2019.5,"WR,DM,TM",4/29/20,Clear,"verified with deployment logs, instrument deployment and refurb records, DP team notes"
+RS03AXPS-PC03A-06-VADCPA301.2016.3,"WR,DM",5/1/19,Clear,verified with post-recovery logs
+RS03AXPS-PC03A-08-HYDBBA303.2019.5,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03AXPS-PC03A-4A-DOSTAD303.2014.1,"WR,DM",5/1/19,Clear,verified with post-recovery logs
+RS03AXPS-SF03A-4A-NUTNRA301.2015.2,"WR,DM",5/1/19,Clear,deployment sheet is correct; script pulled old file
+RS03CCAL-MJ03F-06-HYDLFA305.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03CCAL-MJ03F-06-OBSBBA301.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03CCAL-MJ03F-08-SCTAAA301.2018.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ECAL-MJ03E-05-OBSSPA303.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ECAL-MJ03E-06-BOTPTA302.2014.1,"WR,DM",5/1/19,Clear,put on seafloor in 2013 but not plugged in until 2014; deployment sheet is correct and verified with raw data
+RS03ECAL-MJ03E-08-OBSSPA304.2013.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ECAL-MJ03E-09-HYDLFA304.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03ECAL-MJ03E-09-OBSBBA302.2014,"WR,DM",1/23/20,Clear,verified with IP address ping
+RS03INT1-MJ03C-09-THSPHA301.2014.1,"WR,OK",5/7/19,Clear,verified with post-recovery logs
+RS03INT1-MJ03C-09-THSPHA301.2015.2,"WR,OK",5/7/19,Clear,verified with OEK deployment notes
+RS03INT1-MJ03C-09-THSPHA301.2017.4,"WR,OK",5/7/19,Clear,verified with OEK deployment notes
+RS03INT1-MJ03C-09-THSPHA301.2018.5,"WR,OK",5/7/19,Clear,verified Aseet ID with OEK deployment notes
+RS03INT2-MJ03D-05-OBSSPA305.2014.1,"WR,DM",1/23/20,Clear,verified with IP address ping

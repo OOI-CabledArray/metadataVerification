@@ -1,0 +1,11 @@
+sensor,coeff,constant
+CTD,CC_offset,0.0
+DOFSTA,CC_offset,0.0
+FLNTU,CC_angular_resolution,1.096
+FLNTU,CC_depolarization_ratio,0.039
+FLNTU,CC_scattering_angle,140
+FLORD,CC_angular_resolution,1.076
+FLORD,CC_depolarization_ratio,0.039
+FLORD,CC_scattering_angle,124
+NUTNR,CC_lower_wavelength_limit_for_spectra_fit,217
+NUTNR,CC_upper_wavelength_limit_for_spectra_fit,240
