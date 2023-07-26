@@ -38,8 +38,6 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
     PARAid = ['66645','78452']
     SPKIRid = ['58341']
     
-    #print(githubCal)
-    #print(googleDriveFile)
     if any(assetID in googleDriveFile for assetID in CTDid):
         calCompare = ['COMPARED']
         sensor = 'CTD'
