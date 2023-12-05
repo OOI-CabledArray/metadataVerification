@@ -832,8 +832,13 @@ def SNfromRawBinary(rawFileName):
                 handle.write(chunk)
                 break
         handle.close()
-        playback = 'python2 -m mi.core.instrument.playback datalog ' + driver + ' ' + refDes + ' log:// csv:// ' + downloadFile    
-        processResults = subprocess.call(playback, shell=True)
+        # calls mi playback function and params in the python2 mi environment
+        # for this to work there must be a correctly configured mi env available
+        # see README for step to build mi environment and mi.yml in this repo
+        playback = 'python2 -m mi.core.instrument.playback datalog ' + driver + ' ' + refDes + ' log:// csv:// ' + downloadFile  
+        playback_cmd = 'conda run -n mi ' + playback
+        print(playback_cmd)
+        processResults = subprocess.call(playback_cmd, shell=True)
         os.remove(downloadFile)
         return processResults
     
