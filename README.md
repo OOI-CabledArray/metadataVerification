@@ -13,6 +13,6 @@ Some caveats:
 * used pygsw==0.0.10 instead of pygsw==0.0.11
 * had to install ooi_port_agent into mi environment 
 * has to ensure two version of numpy were not installed and ensure that in the mi env
-  xarray==0.11.3
-  pandas==0.24.2
-  numpy==1.16.5
+  * xarray==0.11.3
+  * pandas==0.24.2
+  * numpy==1.16.5
