@@ -1,5 +1,7 @@
 # metadataVerification
 
+TODO: create docker image to run `ExtractRawArchiveSerialNumbers.ipynb`
+
 Metadata verification scripts for OOI RCA. In order to verify instrument serial numbers the mi-instrument 
 playback function must have a correctly configured python 2.7 env available. This is defined in the mi.yml
 file in this repo and was configured in part using these instructions: 
