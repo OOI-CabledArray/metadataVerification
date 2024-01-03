@@ -1,6 +1,8 @@
 # metadataVerification
+Metadata verification scripts for OOI RCA. 
 
-Metadata verification scripts for OOI RCA. In order to verify instrument serial numbers the mi-instrument 
+### extracting serial numbers from raw data files
+In order to verify instrument serial numbers the mi-instrument 
 playback function must have a correctly configured python 2.7 env available. This is defined in the mi.yml
 file in this repo and was configured in part using these instructions: 
 
