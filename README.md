@@ -18,7 +18,7 @@ Some caveats:
   * numpy==1.16.5
 
 
-# matching manufacturer serial numbers to image serial numbers
+### matching manufacturer serial numbers to image serial numbers
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
 from the cruise. 
 
