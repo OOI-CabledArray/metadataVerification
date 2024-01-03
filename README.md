@@ -16,3 +16,12 @@ Some caveats:
   * xarray==0.11.3
   * pandas==0.24.2
   * numpy==1.16.5
+
+
+# matching manufacturer serial numbers to image serial numbers
+After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
+from the cruise. 
+
+`matchSerialNumbers2023.ipynb` contains a script to match these serial numbers - 
+including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
+master list/manufacturer serial number csv to image asset ids. The notebook contains additional comments. 
