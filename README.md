@@ -22,8 +22,18 @@ Some caveats:
 
 ### matching manufacturer serial numbers to image serial numbers
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
-from the cruise. 
+from the cruise. And image assetID to master list assetID
 
-`matchSerialNumbers2023.ipynb` contains a script to match these serial numbers - 
+`fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
 including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
-master list/manufacturer serial number csv to image asset ids. The notebook contains additional comments. 
+master list/manufacturer serial number csv to image asset ids. This outputs a CSV that sometimes contains multiple assetID
+matches. We go through this output csv `fuzzyMatches_HITL_date.csv` by hand to create a HITL curated column of assetID 
+matches. 
+
+### final verification
+`fuzzyMatches_HITL_data.csv` can now serve as input to the final part of `criticalMetaDataVerification.ipynb` which loops through
+each deployment for each instrument, checking raw files verification and image verification status. In 2023 we also added logic to check
+if instruments require calibration and if instruments can be verified via raw file. This should help prioritize in the final HITL step.
+
+In the final step we manually go through `deploymentVerification_date.csv` and investigate instances where there is a deployment-raw file 
+mismatch (highest priority) and where there is a deployment-image mismatch (high priority). 
