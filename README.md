@@ -1,6 +1,7 @@
 # metadataVerification
 Metadata verification scripts for OOI RCA. 
------------
+
+---------------
 ### extracting serial numbers from raw data files
 In order to verify instrument serial numbers the mi-instrument 
 playback function must have a correctly configured python 2.7 env available. This is defined in the mi.yml
@@ -29,6 +30,7 @@ including partial matches. If no matching serial number is found the script will
 master list/manufacturer serial number csv to image asset ids. This outputs a CSV that sometimes contains multiple assetID
 matches. We go through this output csv `fuzzyMatches_HITL_date.csv` by hand to create a HITL curated column of assetID 
 matches. 
+
 ----------
 ### final verification
 `fuzzyMatches_HITL_data.csv` can now serve as input to the final part of `criticalMetaDataVerification.ipynb` which loops through
