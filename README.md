@@ -21,9 +21,8 @@ Some caveats:
   * numpy==1.16.5
 
 -----------
-### create rawfileSN_YYYY and enter new instruments
-First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local `asset-management` repo is synced with the OOI remote
-`asset-management` repo.
+### create rawfileSN_YYYYMMDD and enter new instruments
+First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the OOI remote.
 
 Update the `param/RCA-InstrumentList.csv` in your local assetManagement repo with any new deployments for the current year. 
 These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.csv`
@@ -31,7 +30,10 @@ These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.cs
 -----------
 ### matching manufacturer serial numbers to image serial numbers
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
-from the cruise. And image assetID to master list assetID
+from the cruise. And image assetID to master list assetID. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
+all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
+`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID`
+
 
 `fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
 including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
