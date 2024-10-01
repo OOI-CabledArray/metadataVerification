@@ -23,6 +23,7 @@ Some caveats:
 -----------
 ### create rawfileSN_YYYY
 First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the OOI remote.
+-----------
 
 ### matching manufacturer serial numbers to image serial numbers
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
