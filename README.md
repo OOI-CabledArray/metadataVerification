@@ -21,7 +21,7 @@ Some caveats:
   * numpy==1.16.5
 
 -----------
-### create rawfileSN_YYYY / new instruments
+### create rawfileSN_YYYY and enter new instruments
 First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the OOI remote.
 
 Update the `param/RCA-InstrumentList.csv` in your local assetManagement repo with any new deployments for the current year. 
