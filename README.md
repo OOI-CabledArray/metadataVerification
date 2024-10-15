@@ -39,7 +39,7 @@ all rows where a serial number was succesfully extracted from a RAW file. The cs
 including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
 master list/manufacturer serial number csv to image asset ids. This outputs a CSV that sometimes contains multiple assetID
 matches. We go through this output csv `fuzzyMatches_HITL_date.csv` by hand to create a HITL curated column of assetID 
-matches. 
+matches. NOTE **MAKE SURE TO FILL IN HITL MATCHES in the `matching_asset_ids` column!** 
 
 ----------
 ### final verification
