@@ -1,0 +1,3 @@
+sensorType,referenceDesignator,startTime,endTime,assetID,instrumentSN,githubCalibrationFile,vendorCalibrationFile
+COVIS,RS03ASHS-MJ03B-12-COVISA301,2018-07-29 00:00:00,2019-06-16T05:34:00,PIRSN-COVISA-00001,"['1']",none,none
+COVIS,RS03ASHS-MJ03B-12-COVISA301,2019-07-05 22:43:00,2023-09-17T01:19:00,PIRSN-COVISA-00001,"['1']",none,none

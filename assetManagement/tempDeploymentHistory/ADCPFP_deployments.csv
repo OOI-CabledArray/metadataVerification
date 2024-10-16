@@ -1,0 +1,2 @@
+sensorType,referenceDesignator,startTime,endTime,assetID,instrumentSN,githubCalibrationFile,vendorCalibrationFile
+ADCPFP,RS03CCAL-MJ03F-11-PADCPA301,2021-08-28 17:40:00,nan,PIRSN-PADCPA-00001,"['1023']",none,none

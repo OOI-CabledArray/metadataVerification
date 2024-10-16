@@ -1,0 +1,3 @@
+sensorType,referenceDesignator,startTime,endTime,assetID,instrumentSN,githubCalibrationFile,vendorCalibrationFile
+TMPSFA,RS03ASHS-MJ03B-07-TMPSFA301,2014-09-28 02:21:00,2017-08-13T23:30:00,ATAPL-58343-00001,"['21968']",none,none
+TMPSFA,RS03ASHS-MJ03B-07-TMPSFA301,2017-08-15 00:00:00,nan,ATAPL-58343-00002,"['21969']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TMPSFA/ATAPL-58343-00002__20140928.csv,none

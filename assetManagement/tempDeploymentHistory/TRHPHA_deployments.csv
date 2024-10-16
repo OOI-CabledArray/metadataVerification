@@ -1,0 +1,10 @@
+sensorType,referenceDesignator,startTime,endTime,assetID,instrumentSN,githubCalibrationFile,vendorCalibrationFile
+TRHPHA,RS03INT1-MJ03C-09-TRHPHA302,2023-09-05 15:24:00,nan,ATAPL-67653-00002,"['2']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00002__20160727.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2014-09-27 06:05:00,2015-07-10T00:00:00,ATAPL-67653-00002,"['2']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00002__20140927.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2015-07-11 20:53:04,2016-07-26T00:00:00,ATAPL-67653-00001,"['1']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00001__20150711.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2016-07-27 05:09:00,2017-08-14T23:30:00,ATAPL-67653-00002,"['2']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00002__20160727.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2017-08-22 10:30:00,2019-07-03T01:58:00,ATAPL-67653-00001,"['1']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00001__20150711.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2019-09-01 00:00:00,2020-08-07T15:12:00,ATAPL-67653-00002,"['2']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00002__20160727.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2020-08-08 00:46:00,2021-08-29T02:12:00,ATAPL-67653-00001,"['1']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00001__20150711.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2021-08-30 02:44:00,2022-08-12T17:44:00,ATAPL-67653-00002,"['2']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00002__20160727.csv,none
+TRHPHA,RS03INT1-MJ03C-10-TRHPHA301,2022-08-13 03:30:00,nan,ATAPL-67653-00001,"['1']",https://github.com/oceanobservatories/asset-management/tree/master/calibration/TRHPHA/ATAPL-67653-00001__20150711.csv,none
