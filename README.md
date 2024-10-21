@@ -34,6 +34,10 @@ from the cruise. And image assetID to master list assetID. To do this, filter `r
 all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
 `referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID`
 
+# NOTE 
+This is just the initial insturments that were expected to have a raw SN to follow up on for the current, year. You will need to either get 
+the final deploymentVerification.csv output to see what other current year instruments need to be verified OR we need to automate this step to produce a list of instruments that
+do not output SN in raw data. #TODO. A script that outputs all deployments for the current year that include instruments that do not broadcast their SN.
 
 `fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
 including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
