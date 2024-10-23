@@ -1,0 +1,368 @@
+-----------------------------------------------
+ADCPTB104
+matching 19003...
+ADCPT for possible AT ATOSU-69826-00002 matches ADCPTB104
+exact match found and sanity check passed
+-----------------------------------------------
+CTDBPN106
+matching 7230...
+CTDBP for possible AT ATOSU-69827-00001 matches CTDBPN106
+found a partial match and sanity check passed
+-----------------------------------------------
+DOSTAD106
+matching 216...
+DOSTA for possible AT ATOSU-58320-00020 matches DOSTAD106
+exact match found and sanity check passed
+-----------------------------------------------
+VEL3DC108
+it looks like there are multiple , SNs in this cell ['5007', '8167']
+matching 5007...
+VEL3D for possible AT ATOSU-69829-00003 matches VEL3DC108
+found a partial match and sanity check passed
+matching 8167...
+VEL3D for possible AT ATOSU-69829-00003 matches VEL3DC108
+found a partial match and sanity check passed
+-----------------------------------------------
+OPTAAD106
+matching 169...
+OPTAA for possible AT ATOSU-58332-00009 matches OPTAAD106
+exact match found and sanity check passed
+-----------------------------------------------
+PCO2WB103
+matching C0080...
+PCO2W for possible AT ATOSU-70570-00002 matches PCO2WB103
+exact match found and sanity check passed
+-----------------------------------------------
+PHSEND103
+matching P0116...
+PHSEN for possible AT ATOSU-70571-00001 matches PHSEND103
+exact match found and sanity check passed
+-----------------------------------------------
+ADCPSI103
+matching 21498...
+ADCPS for possible AT ATOSU-69825-00001 matches ADCPSI103
+exact match found and sanity check passed
+-----------------------------------------------
+CTDBPO108
+matching 7231...
+CTDBP for possible AT ATOSU-69828-00001 matches CTDBPO108
+found a partial match and sanity check passed
+-----------------------------------------------
+DOSTAD108
+matching 133...
+DOSTA for possible AT ATOSU-58320-00021 matches DOSTAD108
+exact match found and sanity check passed
+-----------------------------------------------
+VEL3DC107
+it looks like there are multiple , SNs in this cell ['VEC-4940', '8159']
+matching VEC-4940...
+VEL3D for possible AT ATOSU-69829-00004 matches VEL3DC107
+exact match found and sanity check passed
+matching 8159...
+-----------------------------------------------
+OPTAAC104
+matching 191...
+OPTAA for possible AT ATOSU-69943-00010 matches OPTAAC104
+exact match found and sanity check passed
+-----------------------------------------------
+PCO2WB104
+matching C0064...
+PCO2W for possible AT ATOSU-70570-00001 matches PCO2WB104
+exact match found and sanity check passed
+-----------------------------------------------
+PHSEND107
+matching P0117...
+PHSEN for possible AT ATOSU-70571-00002 matches PHSEND107
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFL105
+matching 52-0145...
+CTDPF for possible AT ATAPL-67977-00005 matches CTDPFL105
+exact match found and sanity check passed
+-----------------------------------------------
+VEL3DA105
+matching 1131...
+FLOR for possible AT ATAPL-58322-00004 DOES NOT match VEL3DA105
+VEL3D for possible AT ATOSU-58346-00008 matches VEL3DA105
+exact match found and sanity check passed
+-----------------------------------------------
+FLCDRA103
+matching 3400...
+FLCDR for possible AT ATOSU-70111-00007 matches FLCDRA103
+exact match found and sanity check passed
+-----------------------------------------------
+FLNTUA103
+matching 3398...
+FLNTU for possible AT ATOSU-70110-00007 matches FLNTUA103
+exact match found and sanity check passed
+-----------------------------------------------
+DOSTAD105
+matching 137...
+DOSTA for possible AT ATOSU-58320-00008 matches DOSTAD105
+exact match found and sanity check passed
+-----------------------------------------------
+ZPLSCB102
+matching 2...
+FLOBN for possible AT ATAPL-58334-00002 DOES NOT match ZPLSCB102
+FLOBN for possible AT ATAPL-70113-00002 DOES NOT match ZPLSCB102
+HPIES for possible AT ATAPL-58323-00002 DOES NOT match ZPLSCB102
+OSMOI for possible AT ATAPL-58333-00002 DOES NOT match ZPLSCB102
+TRHPH for possible AT ATAPL-67653-00002 DOES NOT match ZPLSCB102
+ZPLSC for possible AT ATOSU-63259-00005 matches ZPLSCB102
+exact match found and sanity check passed
+ZPLSC for possible AT ATAPL-90485-20002 matches ZPLSCB102
+exact match found and sanity check passed
+DPDO for possible AT ATAPL-71532-00002 DOES NOT match ZPLSCB102
+DPVE for possible AT ATAPL-71444-00002 DOES NOT match ZPLSCB102
+-----------------------------------------------
+CTDPFA109
+matching 50018...
+CTDPF for possible AT ATOSU-66662-00006 matches CTDPFA109
+found a partial match and sanity check passed
+-----------------------------------------------
+DOSTAD109
+matching 215...
+DOSTA for possible AT ATOSU-58320-00007 matches DOSTAD109
+exact match found and sanity check passed
+-----------------------------------------------
+PHSENA106
+matching P0115...
+PHSEN for possible AT ATOSU-58337-00007 matches PHSENA106
+exact match found and sanity check passed
+-----------------------------------------------
+PCO2WA105
+matching C0079...
+PCO2W for possible AT ATOSU-58336-00006 matches PCO2WA105
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFA107
+matching 50019...
+CTDPF for possible AT ATOSU-66662-00007 matches CTDPFA107
+found a partial match and sanity check passed
+-----------------------------------------------
+PHSENA108
+matching P0131...
+PHSEN for possible AT ATOSU-58337-00008 matches PHSENA108
+exact match found and sanity check passed
+-----------------------------------------------
+FLORTD104
+matching 1150...
+FLOR for possible AT ATOSU-58322-00008 matches FLORTD104
+exact match found and sanity check passed
+-----------------------------------------------
+OPTAAD105
+matching 128...
+OPTAA for possible AT ATOSU-58332-00003 matches OPTAAD105
+exact match found and sanity check passed
+-----------------------------------------------
+SPKIRA102
+matching 267...
+SPKIR for possible AT ATAPL-58341-00004 matches SPKIRA102
+exact match found and sanity check passed
+-----------------------------------------------
+NUTNRA102
+matching 344...
+DOSTA for possible AT ATAPL-58320-00002 DOES NOT match NUTNRA102
+NUTNR for possible AT ATOSU-68020-00005 matches NUTNRA102
+exact match found and sanity check passed
+-----------------------------------------------
+PCO2WA102
+matching C0116...
+PCO2W for possible AT ATOSU-58336-00007 matches PCO2WA102
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFL104
+matching 52-0120...
+CTDPF for possible AT ATAPL-67977-00001 matches CTDPFL104
+exact match found and sanity check passed
+-----------------------------------------------
+VEL3DA103
+matching 1214...
+VEL3D for possible AT ATAPL-58346-00005 matches VEL3DA103
+exact match found and sanity check passed
+-----------------------------------------------
+FLCDRA102
+matching 3098...
+FLCDR for possible AT ATAPL-70111-00001 matches FLCDRA102
+exact match found and sanity check passed
+-----------------------------------------------
+FLNTUA102
+matching 3099...
+FLNTU for possible AT ATAPL-70110-00001 matches FLNTUA102
+exact match found and sanity check passed
+-----------------------------------------------
+DOSTAD104
+matching 458...
+DOSTA for possible AT ATAPL-58320-00009 matches DOSTAD104
+exact match found and sanity check passed
+-----------------------------------------------
+ADCPTD102
+matching 18478...
+ADCPT for possible AT ATAPL-58315-00001 matches ADCPTD102
+exact match found and sanity check passed
+-----------------------------------------------
+VADCPA101
+matching 19075...
+VADCP for possible AT ATAPL-58345-00003 matches VADCPA101
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFA103
+matching 6914...
+CTDPF for possible AT ATAPL-66662-00001 matches CTDPFA103
+found a partial match and sanity check passed
+-----------------------------------------------
+DOSTAD103
+matching 275...
+DOSTA for possible AT ATAPL-58320-00005 matches DOSTAD103
+exact match found and sanity check passed
+-----------------------------------------------
+PHSENA102
+matching P0164...
+PHSEN for possible AT ATAPL-58337-00014 matches PHSENA102
+exact match found and sanity check passed
+-----------------------------------------------
+FLORDD103
+matching 1132...
+FLOR for possible AT ATAPL-58322-00005 matches FLORDD103
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFA102
+matching 7205...
+CTDPF for possible AT ATAPL-66662-00002 matches CTDPFA102
+found a partial match and sanity check passed
+VELPT for possible AT ATAPL-70114-00006 DOES NOT match CTDPFA102
+-----------------------------------------------
+PHSENA101
+matching P0163...
+PHSEN for possible AT ATAPL-58337-00013 matches PHSENA101
+exact match found and sanity check passed
+-----------------------------------------------
+FLORTD101
+matching 1130...
+FLOR for possible AT ATAPL-58322-00003 matches FLORTD101
+exact match found and sanity check passed
+VEL3D for possible AT ATAPL-58346-00003 DOES NOT match FLORTD101
+-----------------------------------------------
+OPTAAD101
+matching 244...
+OPTAA for possible AT ATAPL-58332-00005 matches OPTAAD101
+exact match found and sanity check passed
+SPKIR for possible AT ATAPL-58341-00002 DOES NOT match OPTAAD101
+-----------------------------------------------
+PARADA101
+matching 1399...
+PARAD for possible AT ATAPL-78452-00001 matches PARADA101
+exact match found and sanity check passed
+-----------------------------------------------
+SPKIRA101
+matching 245...
+SPKIR for possible AT ATAPL-58341-00003 matches SPKIRA101
+exact match found and sanity check passed
+-----------------------------------------------
+NUTNRA101
+matching 380...
+NUTNR for possible AT ATAPL-68020-00003 matches NUTNRA101
+exact match found and sanity check passed
+-----------------------------------------------
+VELPTD102
+matching 6389...
+VELPT for possible AT ATAPL-70114-00003 matches VELPTD102
+found a partial match and sanity check passed
+-----------------------------------------------
+PCO2WA101
+matching C0091...
+PCO2W for possible AT ATAPL-58336-00004 matches PCO2WA101
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFL304
+matching 52-0144...
+CTDPF for possible AT ATAPL-67977-00004 matches CTDPFL304
+exact match found and sanity check passed
+-----------------------------------------------
+VEL3DA303
+matching 1148...
+VEL3D for possible AT ATAPL-58346-00004 matches VEL3DA303
+exact match found and sanity check passed
+-----------------------------------------------
+FLCDRA302
+matching 3460...
+FLCDR for possible AT ATAPL-70111-00003 matches FLCDRA302
+exact match found and sanity check passed
+-----------------------------------------------
+FLNTUA302
+matching 3468...
+FLNTU for possible AT ATAPL-70110-00003 matches FLNTUA302
+exact match found and sanity check passed
+-----------------------------------------------
+DOSTAD304
+matching 459...
+DOSTA for possible AT ATAPL-58320-00010 matches DOSTAD304
+exact match found and sanity check passed
+-----------------------------------------------
+VADCPA301
+matching 19073...
+VADCP for possible AT ATAPL-58345-00002 matches VADCPA301
+exact match found and sanity check passed
+-----------------------------------------------
+CTDPFA303
+matching 7233...
+CTDPF for possible AT ATAPL-66662-00004 matches CTDPFA303
+found a partial match and sanity check passed
+-----------------------------------------------
+DOSTAD303
+matching 344...
+DOSTA for possible AT ATAPL-58320-00002 matches DOSTAD303
+exact match found and sanity check passed
+NUTNR for possible AT ATOSU-68020-00005 DOES NOT match DOSTAD303
+-----------------------------------------------
+PHSENA302
+matching P0113...
+PHSEN for possible AT ATAPL-58337-00005 matches PHSENA302
+exact match found and sanity check passed
+-----------------------------------------------
+FLORDD303
+matching 1131...
+FLOR for possible AT ATAPL-58322-00004 matches FLORDD303
+exact match found and sanity check passed
+VEL3D for possible AT ATOSU-58346-00008 DOES NOT match FLORDD303
+-----------------------------------------------
+CTDPFA302
+matching 7232...
+CTDPF for possible AT ATAPL-66662-00003 matches CTDPFA302
+found a partial match and sanity check passed
+-----------------------------------------------
+PHSENA301
+matching P0112...
+PHSEN for possible AT ATAPL-58337-00002 matches PHSENA301
+exact match found and sanity check passed
+-----------------------------------------------
+FLORTD301
+matching 5967...
+FLOR for possible AT ATAPL-58322-00014 matches FLORTD301
+exact match found and sanity check passed
+-----------------------------------------------
+OPTAAD301
+matching 134...
+OPTAA for possible AT ATAPL-58332-00001 matches OPTAAD301
+exact match found and sanity check passed
+-----------------------------------------------
+SPKIRA301
+matching 244...
+OPTAA for possible AT ATAPL-58332-00005 DOES NOT match SPKIRA301
+SPKIR for possible AT ATAPL-58341-00002 matches SPKIRA301
+exact match found and sanity check passed
+-----------------------------------------------
+NUTNRA301
+matching 379...
+NUTNR for possible AT ATAPL-68020-00002 matches NUTNRA301
+exact match found and sanity check passed
+-----------------------------------------------
+VELPTD302
+matching 6334...
+VELPT for possible AT ATAPL-70114-00002 matches VELPTD302
+found a partial match and sanity check passed
+-----------------------------------------------
+PCO2WA301
+matching C0124...
+PCO2W for possible AT ATAPL-58336-00010 matches PCO2WA301
+exact match found and sanity check passed
