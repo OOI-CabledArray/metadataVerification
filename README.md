@@ -30,7 +30,7 @@ These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.cs
 -----------
 ### matching manufacturer serial numbers to image serial numbers
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
-from the cruise. And image assetID to master list assetID. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
+taken on the cruise, and/or image assetIDs to master list assetIDs. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
 all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
 `referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID`
 
