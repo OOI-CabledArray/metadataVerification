@@ -53,3 +53,11 @@ if instruments require calibration and if instruments can be verified via raw fi
 
 In the final step we manually go through `deploymentVerification_date.csv` and investigate instances where there is a deployment-raw file 
 mismatch (highest priority) and where there is a deployment-image mismatch (high priority). 
+
+----------
+### Yearly take-aways
+2024 
+* repeated errors and typos in physcial PCO2 serial numbers
+* DOSTA photos often missing, but these instruments do require cals
+
+
