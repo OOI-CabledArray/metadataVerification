@@ -4,8 +4,11 @@ Metadata verification scripts for OOI RCA.
 ---------------
 ### creating a python 2 environment on m2 mac 
 https://stackoverflow.com/questions/67380286/anaconda-channel-for-installing-python-2-7
-uninstall pip??
+
+uninstall pip
+
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+
 python get-pip.py
 
 ### extracting serial numbers from raw data files
@@ -28,7 +31,7 @@ Some caveats:
 
 -----------
 ### create rawfileSN_YYYYMMDD and enter new instruments
-First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the OOI remote.
+First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the **OOI remote** (not just your personal remote). 
 
 Update the `param/RCA-InstrumentList.csv` in your local assetManagement repo with any new deployments for the current year. 
 These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.csv`
