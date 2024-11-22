@@ -2,6 +2,12 @@
 Metadata verification scripts for OOI RCA. 
 
 ---------------
+### creating a python 2 environment on m2 mac 
+https://stackoverflow.com/questions/67380286/anaconda-channel-for-installing-python-2-7
+uninstall pip??
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+python get-pip.py
+
 ### extracting serial numbers from raw data files
 In order to verify instrument serial numbers the mi-instrument 
 playback function must have a correctly configured python 2.7 env available. This is defined in the mi.yml
