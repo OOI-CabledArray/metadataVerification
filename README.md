@@ -28,9 +28,9 @@ Some caveats:
 
 -----------
 ### create rawfileSN_YYYYMMDD and enter new instruments
-First you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the **OOI remote** (not just your personal remote). 
+Before you run ExtractRawArchiveSerialNumber.ipynb. Make sure your local asset management repo is synced with the **OOI remote** (not just your personal remote). 
 
-Update the `param/RCA-InstrumentList.csv` in your local assetManagement repo with any new deployments for the current year. 
+Make sure `param/RCA-InstrumentList.csv` in your local assetManagement repo is updated with any new sensors for the current year. 
 These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.csv`
 
 -----------
