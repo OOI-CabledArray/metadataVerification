@@ -35,13 +35,13 @@ These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.cs
 
 -----------
 ### matching manufacturer serial numbers to image serial numbers
-In ExtractRawArchiveSerialnumber.ipynb the current years deployments which can't be verified by SNs in the raw files and therefor
-must be verified visually will be saved as `image_SN_prelim_YYYY.csv`
-After serial numbers are extracted from the raw files we need to match manufacturer serial numbers to image serial numbers for the sensors where 
+In ExtractRawArchiveSerialnumber.ipynb the current years deployments which can't be verified by SNs in the raw files (and therefor
+must be verified visually) will be saved as `image_SN_prelim_YYYY.csv`
+After serial numbers are extracted from the raw files we **also** need to match manufacturer SNs to image SNs for the sensors where 
 we expected to find an SN in the raw file but did not. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
-all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
-`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID` Then - combined `image_SN_prelim_YYYY.csv` and the filtered rows where raw SNs were not found from 
-`rawFileSN_YYYMMDD.csv` you can then rename this combined file `image_SN_YYYY.csv`
+all rows where a serial number was succesfully extracted from a RAW file. The unified csv structure should be: 
+`referenceDesignator, deployYear, imageFile, imageSerialNumber, imageAssetID` Then - combine `image_SN_prelim_YYYY.csv` and the filtered rows where raw SNs were not found from 
+`rawFileSN_YYYMMDD.csv` you can then rename this combined file `image_SN_YYYY.csv`.
 
 
 `fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
