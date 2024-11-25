@@ -35,15 +35,14 @@ These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.cs
 
 -----------
 ### matching manufacturer serial numbers to image serial numbers
-After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
-taken on the cruise, and/or image assetIDs to master list assetIDs. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
+In ExtractRawArchiveSerialnumber.ipynb the current years deployments which can't be verified by SNs in the raw files and therefor
+must be verified visually will be saved as `image_SN_prelim_YYYY.csv`
+After serial numbers are extracted from the raw files we need to match manufacturer serial numbers to image serial numbers for the sensors where 
+we expected to find an SN in the raw file but did not. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
 all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
-`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID`
+`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID` Then - combined `image_SN_prelim_YYYY.csv` and the filtered rows where raw SNs were not found from 
+`rawFileSN_YYYMMDD.csv` you can then rename this combined file `image_SN_YYYY.csv`
 
-### NOTE 
-This is just the initial insturments that were expected to have a raw SN to follow up on for the current, year. You will need to either get 
-the final deploymentVerification.csv output to see what other current year instruments need to be verified OR we need to automate this step to produce a list of instruments that
-do not output SN in raw data. #TODO. A script that outputs all deployments for the current year that include instruments that do not broadcast their SN.
 
 `fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
 including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
