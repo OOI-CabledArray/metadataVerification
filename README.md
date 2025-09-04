@@ -32,7 +32,8 @@ These can be found in `ooi/asset-management/bulk/sensor_bulk_load-AssetRecord.cs
 After serial numbers are extracted from the raw files we also need to match manufacturer serial numbers to image serial numbers 
 from the cruise. And image assetID to master list assetID. To do this, filter `rawFileSN_YYYYMMDD` by current year, and remove
 all rows where a serial number was succesfully extracted from a RAW file. The csv structure will be: 
-`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID`
+`referenceDesignator,deployYear,imageFile,imageSerialNumber,imageAssetID` Save this csv as `imageSN_YYYY_draft` and fill it out 
+using images from the most recent cruise. It will be the input to `fuzzyMatchSNandAssetID.ipynb`.
 
 
 `fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
