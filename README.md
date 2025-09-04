@@ -49,5 +49,8 @@ matches.
 each deployment for each instrument, checking raw files verification and image verification status. In 2023 we also added logic to check
 if instruments require calibration and if instruments can be verified via raw file. This should help prioritize in the final HITL step.
 
-In the final step we manually go through `deploymentVerification_date.csv` and investigate instances where there is a deployment-raw file 
+**NOTE** If running `criticalMetaDataVerification.ipynb` locally make sure that all your local asset management repos: `deployments`,
+`asset-management` and `deployments` are up to date with the remotes.
+
+In the final step we manually go through `deploymentVerification_YYYYMMDD.csv` and investigate instances where there is a deployment-raw file 
 mismatch (highest priority) and where there is a deployment-image mismatch (high priority). 
