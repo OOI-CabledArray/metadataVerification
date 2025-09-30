@@ -61,4 +61,5 @@ This compares what is in OOI asset management github and what is in the originl 
 for a CTD it will go to OOI assett management and the CTD vendor file located on the RCA github and compare
 row for row each coefficient and the serial number. These report outs are cumulative 2014-present.
 
-
+# Adding HITL notes
+To add HITL notes, go to 2i_HITL and select either calibrationVerification or deploymentVerification
