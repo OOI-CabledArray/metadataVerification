@@ -54,3 +54,11 @@ if instruments require calibration and if instruments can be verified via raw fi
 
 In the final step we manually go through `deploymentVerification_YYYYMMDD.csv` and investigate instances where there is a deployment-raw file 
 mismatch (highest priority) and where there is a deployment-image mismatch (high priority). 
+
+
+## REPORT OUT: calibration verification 
+This compares what is in OOI asset management github and what is in the originl vender file. For example, 
+for a CTD it will go to OOI assett management and the CTD vendor file located on the RCA github and compare
+row for row each coefficient and the serial number. These report outs are cumulative 2014-present.
+
+
