@@ -26,6 +26,10 @@ import xml.etree.ElementTree as ET
 
 def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstants_dict):
 
+    ## calCompare stays 'NAN' for sensors with no comparison rule (the notebook reports
+    ## these as NOTCOMPARED), and 'NO_VENDOR_FILE' for a sensor that has a rule but whose
+    ## vendor file is absent or yields none of the expected coefficients.
+    ## 'COMPARED' is only set once a vendor file has actually been opened and read.
     calCompare = ['NAN']
 
     CTDid = ['66662','69828','69827','67627']
@@ -39,10 +43,11 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
     SPKIRid = ['58341']
     
     if any(assetID in googleDriveFile for assetID in CTDid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'CTD'
         # read in google drive xmlcon
         if os.path.isfile(googleDriveFile + '.xmlcon'):
+            calCompare = ['COMPARED']
             googleDriveCal = ET.parse(googleDriveFile + '.xmlcon')
             root = googleDriveCal.getroot()
             for calCoeff, row in githubCal.iterrows():
@@ -64,6 +69,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                     calCompare.append([googleDriveFile, row['name'], github_coeff, xmlcon_coeff, coeffDiff])
 
         elif os.path.isfile(googleDriveFile + '.cal'):
+            calCompare = ['COMPARED']
             vendorCals = parseVendorCal(googleDriveFile + '.cal',sensor)
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
@@ -82,9 +88,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED' 
         
     elif any(assetID in googleDriveFile for assetID in DOFSTAid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'DOFSTA'
         if os.path.isfile(googleDriveFile + '.cal'):
+            calCompare = ['COMPARED']
             vendorCals = parseVendorCal(googleDriveFile + '.cal',sensor)
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
@@ -126,9 +133,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED'
         
     elif any(assetID in googleDriveFile for assetID in FLNTUid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'FLNTU'
         if os.path.isfile(googleDriveFile + '.dev') or os.path.isfile(googleDriveFile + '.dev.lambda'):
+            calCompare = ['COMPARED']
             if os.path.isfile(googleDriveFile + '.dev.lambda'):
                 fileSuffix = '.dev.lambda'
             else:
@@ -148,9 +156,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED'
         
     elif any(assetID in googleDriveFile for assetID in FLCDRid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'FLCDR'
         if os.path.isfile(googleDriveFile + '.dev'):
+            calCompare = ['COMPARED']
             vendorCals = parseVendorCal(googleDriveFile + '.dev', sensor)
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = float(row['value'])
@@ -163,9 +172,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED'
 
     elif any(assetID in googleDriveFile for assetID in FLORDid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'FLORD'
         if os.path.isfile(googleDriveFile + '.dev') or os.path.isfile(googleDriveFile + '.dev.lambda'):        
+            calCompare = ['COMPARED']
             if os.path.isfile(googleDriveFile + '.dev.lambda'):
                 fileSuffix = '.dev.lambda'
             else:
@@ -185,9 +195,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED'
  
     elif any(assetID in googleDriveFile for assetID in NUTNRid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'NUTNR'
         if os.path.isfile(googleDriveFile + '.cal'):
+            calCompare = ['COMPARED']
             vendorCals = parseVendorCal(googleDriveFile + '.cal', sensor)
             for calCoeff, row in githubCal.iterrows():
                 if '[' in row['value']:
@@ -210,12 +221,13 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
     elif any(assetID in googleDriveFile for assetID in OPTAAid):
         pass
     elif any(assetID in googleDriveFile for assetID in PARAid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'PARA'
         if os.path.isfile(googleDriveFile + '.tdf'):
             vendorCals = parseVendorCal(googleDriveFile + '.tdf', sensor)
             #print(vendorCals)
             if 'CC_a0' in vendorCals:
+                calCompare = ['COMPARED']
                 for calCoeff, row in githubCal.iterrows():
                     github_coeff = row['value']
                     vendor_coeff = float(vendorCals[row['name']])
@@ -227,13 +239,14 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             calCompare[0] = 'PDF_NOTCOMPARED'
 
     elif any(assetID in googleDriveFile for assetID in SPKIRid):
-        calCompare = ['COMPARED']
+        calCompare = ['NO_VENDOR_FILE']
         sensor = 'SPKIR'
         if os.path.isfile(googleDriveFile + '.cal'):
             vendorCals = parseVendorCal(googleDriveFile + '.cal', sensor)
             #print(vendorCals)
             if 'CC_scale' in vendorCals:
                 if vendorCals['CC_scale']:
+                    calCompare = ['COMPARED']
                     for calCoeff, row in githubCal.iterrows():
                         github_coeff = ast.literal_eval(row['value'])
                         vendor_coeff = vendorCals[row['name']]
