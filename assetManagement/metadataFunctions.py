@@ -24,6 +24,19 @@ import xml.etree.ElementTree as ET
 
 
 
+def recordDiff(calCompare, fileName, coeffName, github_coeff, expected_coeff, coeffDiff, coeffSource):
+    ## A coefficient checked against params/coefficientConstants.csv is not a disagreement
+    ## with the vendor -- there is no vendor value involved -- so it carries its own verdict.
+    ## A real vendor disagreement always outranks a constant one.
+    if coeffSource == 'vendor':
+        calCompare[0] = 'MISMATCH'
+    elif calCompare[0] != 'MISMATCH':
+        calCompare[0] = 'CONSTANT_MISMATCH'
+    calCompare.append([fileName, coeffName, github_coeff, expected_coeff, coeffDiff, coeffSource])
+
+
+
+
 def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstants_dict):
 
     ## calCompare stays 'NAN' for sensors with no comparison rule (the notebook reports
@@ -31,6 +44,9 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
     ## vendor file is absent or yields none of the expected coefficients.
     ## 'COMPARED' is only set once a vendor file has actually been opened and read.
     calCompare = ['NAN']
+
+    ## sensors with no entries in coefficientConstants.csv compare against the vendor throughout
+    coeffSource = 'vendor'
 
     CTDid = ['66662','69828','69827','67627']
     DOFSTAid = ['58694']
@@ -53,8 +69,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     xmlcon_coeff = float(CalConstants_dict[sensor][row['name']])
                 else:
+                    coeffSource = 'vendor'
                     #print(fileName)
                     xmlcon_coeffName = CalCoeff_dict[row['name']][1]
                     elemTag = "Instrument/SensorArray/Sensor/" + CalCoeff_dict[row['name']][0] + "Sensor/"
@@ -65,8 +83,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                 coeffDiff = (github_coeff - xmlcon_coeff)
 
                 if coeffDiff != 0:
-                    calCompare[0] = 'MISMATCH'
-                    calCompare.append([googleDriveFile, row['name'], github_coeff, xmlcon_coeff, coeffDiff])
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, xmlcon_coeff, coeffDiff, coeffSource)
 
         elif os.path.isfile(googleDriveFile + '.cal'):
             calCompare = ['COMPARED']
@@ -74,15 +91,16 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     vendor_coeff = CalConstants_dict[sensor][row['name']]
                 else:
+                    coeffSource = 'vendor'
                     #vendor_coeffName = CalCoeff_dict[row['name']][1]
                     vendor_coeff = float(vendorCals[row['name']])
 
-            coeffDiff = (github_coeff - vendor_coeff)
-            if coeffDiff != 0:
-                calCompare[0] = 'MISMATCH'
-                calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                coeffDiff = (github_coeff - vendor_coeff)
+                if coeffDiff != 0:
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
 
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED' 
@@ -96,15 +114,16 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     vendor_coeff = CalConstants_dict[sensor][row['name']]
                 else:
+                    coeffSource = 'vendor'
                     vendor_coeffName = CalCoeff_dict[row['name']][1]
                     vendor_coeff = float(vendorCals[vendor_coeffName])
 
-            coeffDiff = (github_coeff - vendor_coeff)
-            if coeffDiff != 0:
-                calCompare[0] = 'MISMATCH'
-                calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                coeffDiff = (github_coeff - vendor_coeff)
+                if coeffDiff != 0:
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
 
         elif os.path.isfile(googleDriveFile + '.xml'):
             calCompare = ['COMPARED_XML']
@@ -113,8 +132,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = row['value']
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     xml_coeff = float(CalConstants_dict[sensor][row['name']])
                 else:
+                    coeffSource = 'vendor'
                     #print(fileName)
                     xml_coeffName = CalCoeff_dict[row['name']][1]
                     elemTag = 'CalibrationCoefficients'
@@ -127,8 +148,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                 coeffDiff = (github_coeff - xml_coeff)
 
                 if coeffDiff != 0:
-                    calCompare[0] = 'MISMATCH'
-                    calCompare.append([googleDriveFile, row['name'], github_coeff, xml_coeff, coeffDiff])
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, xml_coeff, coeffDiff, coeffSource)
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED'
         
@@ -145,13 +165,14 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = float(row['value'])
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     vendor_coeff = float(CalConstants_dict[sensor][row['name']])
                 else:
+                    coeffSource = 'vendor'
                     vendor_coeff = float(vendorCals[row['name']])
                 coeffDiff = (github_coeff - vendor_coeff)
                 if coeffDiff != 0:
-                    calCompare[0] = 'MISMATCH'
-                    calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED'
         
@@ -166,8 +187,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                 vendor_coeff = float(vendorCals[row['name']])
                 coeffDiff = (github_coeff - vendor_coeff)
                 if coeffDiff !=0:
-                    calCompare[0] = 'MISMATCH'
-                    calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED'
 
@@ -184,13 +204,14 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
             for calCoeff, row in githubCal.iterrows():
                 github_coeff = float(row['value'])
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     vendor_coeff = float(CalConstants_dict[sensor][row['name']])
                 else:
+                    coeffSource = 'vendor'
                     vendor_coeff = float(vendorCals[row['name']])
                 coeffDiff = (github_coeff - vendor_coeff)
                 if coeffDiff != 0:
-                    calCompare[0] = 'MISMATCH'
-                    calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                    recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED'
  
@@ -206,8 +227,10 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                 else:
                     github_coeff = float(row['value'])
                 if row['name'] in CalConstants_dict[sensor]:
+                    coeffSource = 'constant'
                     vendor_coeff = float(CalConstants_dict[sensor][row['name']])
                 else:
+                    coeffSource = 'vendor'
                     vendor_coeff = vendorCals[row['name']]
                 if isinstance(github_coeff,list):
                     coeffDiff = set(github_coeff).symmetric_difference(vendor_coeff)
@@ -215,8 +238,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                     coeffDiff = github_coeff - vendor_coeff
                 if coeffDiff:
                     if coeffDiff != 0:
-                        calCompare[0] = 'MISMATCH'
-                        calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                        recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, coeffSource)
 
     elif any(assetID in googleDriveFile for assetID in OPTAAid):
         pass
@@ -233,8 +255,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                     vendor_coeff = float(vendorCals[row['name']])
                     coeffDiff = (github_coeff - vendor_coeff)
                     if coeffDiff != 0:
-                        calCompare[0] = 'MISMATCH'
-                        calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                        recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, 'vendor')
         elif os.path.isfile(googleDriveFile + '.pdf'):
             calCompare[0] = 'PDF_NOTCOMPARED'
 
@@ -252,8 +273,7 @@ def compareCalCoefficients(githubCal, googleDriveFile, CalCoeff_dict, CalConstan
                         vendor_coeff = vendorCals[row['name']]
                         coeffDiff = set(github_coeff).symmetric_difference(vendor_coeff)
                         if coeffDiff:
-                            calCompare[0] = 'MISMATCH'
-                            calCompare.append([googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff])
+                            recordDiff(calCompare, googleDriveFile, row['name'], github_coeff, vendor_coeff, coeffDiff, 'vendor')
     
     return calCompare
 
