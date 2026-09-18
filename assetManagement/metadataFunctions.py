@@ -11,13 +11,48 @@ from bs4 import BeautifulSoup
 import csv
 import datetime
 import glob
+from loguru import logger
 import numpy as np
 import os
 import pandas as pd
 import re
 import requests
 import subprocess
+import sys
 import xml.etree.ElementTree as ET
+
+
+## Sensible default for notebook use: messages to stdout, and none of the per-folder
+## archive-crawl detail, which is logged at DEBUG.  extract_raw_sn.py replaces these
+## sinks with its own, including a DEBUG log file for the whole run.
+logger.remove()
+logger.add(sys.stdout, level='INFO', format='<level>{message}</level>')
+
+
+## The mi-instrument playback drivers are python 2.7 only (CI has not ported them),
+## so they are run in a separate conda env rather than in this interpreter.
+MI_ENV = 'mi-racle'
+MI_RUN = 'conda run -n ' + MI_ENV
+_miEnvChecked = False
+
+
+def requireMIenv():
+    ## Check the python2 mi env up front.  Without this a missing or broken env makes
+    ## every binary extraction return '-99999', which is indistinguishable from a
+    ## genuine 'no serial number in this file' result.
+    global _miEnvChecked
+    if _miEnvChecked:
+        return
+    check = subprocess.run(MI_RUN + ' python2 -c "import mi"',
+                           shell=True, capture_output=True, text=True)
+    if check.returncode == 0:
+        _miEnvChecked = True
+    else:
+        raise RuntimeError(
+            "conda env '" + MI_ENV + "' is not usable, so serial numbers cannot be "
+            "extracted from binary files (ADCP/VADCP/OPTAA).  See the README for how to "
+            "build it from mi.yml.\n"
+            + check.stderr.strip()[-500:])
 
 
 
@@ -293,7 +328,6 @@ def createFileList(refDesg):
     rf_node = refDesg[9:14]
     rf_instrument = refDesg[18:27]
     rf_instrument_partial = refDesg[18:23]
-    print(rf_site + ' ' + rf_node + ' ' + rf_instrument)
     ## Build top level directory URL
     nodeURL = rawURLbase + rf_site + '/' + rf_node
     ## Create file list for top directory and 2 subsequent sub-directories,
@@ -320,7 +354,7 @@ def createFileList(refDesg):
                 if instFolderList:
                     for subFolder in instFolderList:
                         if not re.search(r".*\/\/files.*",subFolder):
-                            print("searching subfolder: " + subFolder)
+                            logger.debug("searching subfolder: " + subFolder)
                             ###print('time before listFD: ', datetime.datetime.now())
                             instFileList_sub1, instFolderList_sub1 = listFD(subFolder)
                             ###print('time after listFD: ', datetime.datetime.now())
@@ -329,9 +363,9 @@ def createFileList(refDesg):
                             if instFolderList_sub1:
                                 for sub_subFolder in instFolderList_sub1:
                                     if re.search(r".*\/\/files.*",sub_subFolder):
-                                        print("invalid folder: " + sub_subFolder)
+                                        logger.debug("invalid folder: " + sub_subFolder)
                                     else:
-                                        print("searching: " + sub_subFolder)
+                                        logger.debug("searching: " + sub_subFolder)
                                         ###print('time before listFD: ', datetime.datetime.now())
                                         instFileList_sub2, instFolderList_sub2 = listFD(sub_subFolder)
                                         ###print('time after listFD: ', datetime.datetime.now())
@@ -446,7 +480,7 @@ def parseVendorCal(fileName,sensor):
     vendorCals['fileName']=fileName
     if "xml" in fileName:
         if "CTD" in sensor:
-            print("parse CTD values")
+            logger.debug("parse CTD values")
             ##tree = ET.parse(fileName)
             ##root = tree.getroot()
     elif "cal" in fileName or "dev" in fileName or "tdf" in fileName:
@@ -471,44 +505,44 @@ def parseVendorCal(fileName,sensor):
                     if "SOC=" in line:
                         mat = re.match(r"^SOC=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for Soc!')
+                            logger.warning('no match for Soc!')
                         else:
                             vendorCals['Soc'] = mat.group(1)
                     elif "VOFFSET=" in line:
                         mat = re.match(r"^VOFFSET=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for voffset!')
+                            logger.warning('no match for voffset!')
                         else:
                             vendorCals['offset'] = mat.group(1)
                     elif "A=" in line:
                         mat = re.match(r"^A=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for A!')
+                            logger.warning('no match for A!')
                         else:
                             vendorCals['A'] = mat.group(1)
                     elif "B=" in line:
                         mat = re.match(r"^B=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for B!')
+                            logger.warning('no match for B!')
                         else:
                             vendorCals['B'] = mat.group(1)
                     elif "C=" in line: 
                         mat = re.match(r"^C=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for C!')
+                            logger.warning('no match for C!')
                         else:
                             vendorCals['C'] = mat.group(1)
                     elif "E=" in line:
                         if re.search(r"^E=.*",line):
                             mat = re.match(r"^E=\s*(\S+)",line)
                             if mat is None:
-                                print('no match for E!')
+                                logger.warning('no match for E!')
                             else:
                                 vendorCals['E'] = mat.group(1)
                     elif "Tau20=" in line:
                         mat = re.match(r"^Tau20=\s*(\S+)",line)
                         if mat is None:
-                            print('no match for Tau20!')
+                            logger.warning('no match for Tau20!')
                         else:
                             vendorCals['Tau20'] = mat.group(1)
 
@@ -529,9 +563,9 @@ def parseVendorCal(fileName,sensor):
                         if mat is not None:
                             if 'CC_scale_factor_chlorophyll_a' in vendorCals:
                                 if vendorCals['CC_scale_factor_chlorophyll_a'] == mat.group(1):
-                                    print('duplicate values...ignoring second set')
+                                    logger.debug('duplicate values...ignoring second set')
                                 else:
-                                    print('not duplicate values!!!')
+                                    logger.warning('not duplicate values!!!')
                             else:
                                 vendorCals['CC_scale_factor_chlorophyll_a'] = mat.group(1)
                                 vendorCals['CC_dark_counts_chlorophyll_a'] = mat.group(2)
@@ -618,11 +652,15 @@ def partialMatch(str1,str2,minCharacters):
 def rawFileMatchExtract(RefDes_dict):
     ## List sensors that produce binary data files
     binaryRaw = ['ADCP','OPTAA']
+    ## Binary sensors need the python2 mi env.  Check it before the archive crawl below,
+    ## which takes on the order of an hour, rather than failing instrument by instrument.
+    if any(sensor in key[18:27] for key in RefDes_dict for sensor in binaryRaw):
+        requireMIenv()
     ## Main loop start to iterate over each Reference Designator listed in the deployment sheets:
     for key,values in RefDes_dict.items():
         ## Filter to include all sensors listed in "rawCheckSensors",
         ## and exclude sensors in exclude lists (sensors and nodes)
-        print ("creating file list for: " + key)
+        logger.debug("creating file list for: " + key)
         ## Create list of filenames paired with filedates of all files on the raw archive for a
         ## given sensor in the main and sub-directories, then sort by date
         ###print('time before createFileList: ', datetime.datetime.now())
@@ -634,7 +672,6 @@ def rawFileMatchExtract(RefDes_dict):
         sortedFileList = sorted(fileList,key=lambda x: (x[0]))
         if sortedFileList:
             for deployment in RefDes_dict[key]:
-                print(deployment['firstRawFile'])
                 if 'nan' not in str(deployment['deployEnd']):
                     endDate = datetime.datetime.strptime(deployment['deployEnd'], '%Y-%m-%dT%H:%M:%S')
                 else:
@@ -868,12 +905,18 @@ def SNfromRawBinary(rawFileName):
         # calls mi playback function and params in the python2 mi environment
         # for this to work there must be a correctly configured mi env available
         # see README for step to build mi environment and mi.yml in this repo
-        playback = 'python2 -m mi.core.instrument.playback datalog ' + driver + ' ' + refDes + ' log:// csv:// ' + downloadFile  
-        playback_cmd = 'conda run -n mi-racle ' + playback
-        print(playback_cmd)
-        processResults = subprocess.call(playback_cmd, shell=True)
+        playback = 'python2 -m mi.core.instrument.playback datalog ' + driver + ' ' + refDes + ' log:// csv:// ' + downloadFile
+        playback_cmd = MI_RUN + ' ' + playback
+        logger.debug(playback_cmd)
+        processResults = subprocess.run(playback_cmd, shell=True, capture_output=True, text=True)
         os.remove(downloadFile)
-        return processResults
+        ## a failed playback is not the same as 'no serial number in this file' -- say so,
+        ## otherwise a broken driver call silently reads as a legitimate miss
+        if processResults.returncode != 0:
+            logger.error('mi playback failed (exit ' + str(processResults.returncode)
+                         + ') for ' + downloadFile)
+            logger.error(processResults.stderr.strip()[-500:])
+        return processResults.returncode
     
     SN = '-99999'
     refDes = 'emptyField'
@@ -882,10 +925,10 @@ def SNfromRawBinary(rawFileName):
         if parse(driver) == 0:
             if os.path.isfile('adcp_config.csv'):
                 df = pd.read_csv('adcp_config.csv')
-                SN = str(int(df.serial_number))  
+                SN = str(int(df.serial_number.iloc[0]))  
                 os.remove('adcp_config.csv')
             else:
-                print('no file created')
+                logger.debug('no file created')
                 SN = '-99999'
     ## TODO: this driver returns without error, but does not produce files...
     if 'VADCP' in rawFileName:
@@ -893,23 +936,22 @@ def SNfromRawBinary(rawFileName):
         if parse(driver) == 0:
             if os.path.isfile('adcp_config.csv'):
                 df = pd.read_csv('adcp_config.csv')
-                SN = str(int(df.serial_number))  
+                SN = str(int(df.serial_number.iloc[0]))  
                 os.remove('adcp_config.csv')
             else:
-                print('no file created')
+                logger.debug('no file created')
                 SN = '-99999'
     if 'OPTAA' in rawFileName:
         driver = 'mi.instrument.wetlabs.ac_s.ooicore.driver'
         if parse(driver) == 0:
             if os.path.isfile('optaa_sample.csv'):
                 df = pd.read_csv('optaa_sample.csv',nrows=1)
-                SN = str(int(df.serial_number))
+                SN = str(int(df.serial_number.iloc[0]))
                 os.remove('optaa_sample.csv')
             else:
-                print('no file created')
+                logger.debug('no file created')
                 SN = '-99999'
                 
-    ##### TODO: how do I get a string out of a dataframe without first going to an int?!?!?
     return SN
 
 
