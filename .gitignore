@@ -15,3 +15,5 @@ optaa_*.csv
 # per-run logs written beside each script's output
 assetManagement/params/rawFileSN_*.log
 assetManagement/inputs/imageSN_*.log
+
+.vscode

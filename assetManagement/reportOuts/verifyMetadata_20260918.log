@@ -1,0 +1,204 @@
+2026-09-18 11:41:30 | INFO    | mode:                 remote, as ingested by CI
+2026-09-18 11:41:30 | INFO    | asset-management:     https://raw.githubusercontent.com/oceanobservatories/asset-management/master
+2026-09-18 11:41:30 | INFO    | calibration files:    https://raw.githubusercontent.com/OOI-CabledArray/calibrationFiles/master
+2026-09-18 11:41:30 | INFO    | raw serial numbers:   /Users/joeduprey/repos/metadataVerification/assetManagement/params/rawFileSN_20260915.csv
+2026-09-18 11:41:30 | INFO    | image serial numbers: /Users/joeduprey/repos/metadataVerification/assetManagement/params/imageSN_2026.csv
+2026-09-18 11:41:30 | INFO    | curated image matches: /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/fuzzyMatches_HITL_20260917.csv
+2026-09-18 11:41:30 | INFO    | writing:              /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/deploymentVerification_20260918.csv
+2026-09-18 11:41:30 | INFO    |                       /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/sensorBulkVerification_20260918.txt
+2026-09-18 11:41:30 | INFO    |                       /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/calibrationVerification_20260918.csv
+2026-09-18 11:41:30 | INFO    |                       /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/missingCalFiles_20260918.txt
+2026-09-18 11:41:30 | INFO    | run log:              /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/verifyMetadata_20260918.log
+2026-09-18 11:41:30 | INFO    | 
+loading asset-management records...
+2026-09-18 11:41:37 | INFO    |   166 reference designators, 1413 deployments, 2881 sensor bulk records
+2026-09-18 11:41:37 | INFO    | 
+reading calibration file listings...
+2026-09-18 11:43:28 | INFO    |   1174 asset-management cal files, 1336 vendor files
+2026-09-18 11:43:28 | INFO    | 
+=== sensor bulk verification ===
+2026-09-18 11:43:28 | INFO    |   307 match, 69 match on format only, 26 mismatch
+2026-09-18 11:43:28 | WARNING |   serial numbers disagreeing with sensorBulk:
+2026-09-18 11:43:28 | WARNING |       ATAPL-58693-00005      RCA ['299470'] / bulk 299464
+2026-09-18 11:43:28 | WARNING |       PIRSN-CAMPIA-00001     RCA ['SUBC17758,SUBC18936'] / bulk 1
+2026-09-18 11:43:28 | WARNING |       PIRSN-OVRSRA-00001     RCA ['1'] / bulk 101409
+2026-09-18 11:43:28 | WARNING |       PIRSN-QNTSRA-00001     RCA ['1'] / bulk 1708062
+2026-09-18 11:43:28 | WARNING |       ATAPL-58338-00001      RCA ['12881-04'] / bulk nan
+2026-09-18 11:43:28 | WARNING |       ATAPL-58338-00002      RCA ['13003-01'] / bulk nan
+2026-09-18 11:43:28 | WARNING |       ATAPL-58338-00003      RCA ['12881-03'] / bulk 12881-04
+2026-09-18 11:43:28 | WARNING |       ATAPL-58340-00001      RCA ['12881-01'] / bulk nan
+2026-09-18 11:43:28 | WARNING |       ATAPL-58340-00002      RCA ['12881-02'] / bulk nan
+2026-09-18 11:43:28 | WARNING |       ATAPL-58340-00003      RCA ['13003-02'] / bulk 12881-01
+2026-09-18 11:43:28 | WARNING |       PIRSN-A0ABPA-10001     RCA ['1A'] / bulk 1-A
+2026-09-18 11:43:28 | WARNING |       PIRSN-FETCHA-00001     RCA ['3404307-001'] / bulk 1
+2026-09-18 11:43:28 | WARNING |       PIRSN-FETCHA-00002     RCA ['345541-001'] / bulk 2
+2026-09-18 11:43:28 | WARNING |       PIRSN-SCPRAA-00001     RCA ['1'] / bulk 001/C
+2026-09-18 11:43:28 | WARNING |       ATAPL-71532-00001      RCA ['1'] / bulk SN00001
+2026-09-18 11:43:28 | WARNING |       ATAPL-71532-00002      RCA ['2'] / bulk SN00002
+2026-09-18 11:43:28 | WARNING |       ATAPL-71532-00003      RCA ['3'] / bulk SN00003
+2026-09-18 11:43:28 | WARNING |       ATAPL-71532-00004      RCA ['4'] / bulk SN00004
+2026-09-18 11:43:28 | WARNING |       ATAPL-71532-00005      RCA ['5'] / bulk SN00005
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00001      RCA ['1'] / bulk SN00001
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00002      RCA ['2'] / bulk SN00002
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00003      RCA ['3'] / bulk SN00003
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00004      RCA ['4'] / bulk SN00004
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00005      RCA ['5'] / bulk SN00005
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00006      RCA ['6'] / bulk SN00006
+2026-09-18 11:43:28 | WARNING |       ATAPL-71444-00007      RCA ['7'] / bulk SN00007
+2026-09-18 11:43:28 | INFO    |   8 in the RCA list but not sensorBulk, 32 in sensorBulk but not the RCA list
+2026-09-18 11:43:28 | INFO    | 
+=== calibration verification ===
+2026-09-18 11:44:22 | INFO    |   100/1174 cal files
+2026-09-18 11:45:01 | WARNING |   coefficient mismatch in ATAPL-67627-00001__20150423.csv
+2026-09-18 11:45:18 | INFO    |   200/1174 cal files
+2026-09-18 11:46:19 | WARNING |   coefficient mismatch in ATOSU-58694-00007__20200922.csv
+2026-09-18 11:46:23 | INFO    |   300/1174 cal files
+2026-09-18 11:46:55 | INFO    |   400/1174 cal files
+2026-09-18 11:47:37 | WARNING |   coefficient mismatch in ATAPL-70110-00001__20130422.csv
+2026-09-18 11:47:43 | WARNING |   coefficient mismatch in ATAPL-70110-00002__20131205.csv
+2026-09-18 11:47:45 | INFO    |   500/1174 cal files
+2026-09-18 11:48:06 | WARNING |   coefficient mismatch in ATOSU-70110-00007__20131205.csv
+2026-09-18 11:48:12 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20121213.csv
+2026-09-18 11:48:12 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20170217.csv
+2026-09-18 11:48:13 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20171127.csv
+2026-09-18 11:48:14 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20190906.csv
+2026-09-18 11:48:14 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20201007.csv
+2026-09-18 11:48:15 | WARNING |   coefficient mismatch in ATAPL-58322-00001__20221028.csv
+2026-09-18 11:48:15 | WARNING |   coefficient mismatch in ATAPL-58322-00002__20131022.csv
+2026-09-18 11:48:16 | WARNING |   coefficient mismatch in ATAPL-58322-00002__20160116.csv
+2026-09-18 11:48:16 | WARNING |   coefficient mismatch in ATAPL-58322-00002__20171107.csv
+2026-09-18 11:48:17 | WARNING |   coefficient mismatch in ATAPL-58322-00002__20201007.csv
+2026-09-18 11:48:17 | WARNING |   coefficient mismatch in ATAPL-58322-00002__20221028.csv
+2026-09-18 11:48:18 | WARNING |   coefficient mismatch in ATAPL-58322-00003__20131022.csv
+2026-09-18 11:48:19 | WARNING |   coefficient mismatch in ATAPL-58322-00003__20160112.csv
+2026-09-18 11:48:19 | WARNING |   coefficient mismatch in ATAPL-58322-00003__20171103.csv
+2026-09-18 11:48:20 | WARNING |   coefficient mismatch in ATAPL-58322-00003__20190906.csv
+2026-09-18 11:48:20 | WARNING |   coefficient mismatch in ATAPL-58322-00003__20211013.csv
+2026-09-18 11:48:23 | WARNING |   coefficient mismatch in ATAPL-58322-00004__20131025.csv
+2026-09-18 11:48:23 | WARNING |   coefficient mismatch in ATAPL-58322-00004__20160114.csv
+2026-09-18 11:48:24 | WARNING |   coefficient mismatch in ATAPL-58322-00004__20171108.csv
+2026-09-18 11:48:24 | WARNING |   coefficient mismatch in ATAPL-58322-00004__20190911.csv
+2026-09-18 11:48:24 | WARNING |   coefficient mismatch in ATAPL-58322-00004__20211027.csv
+2026-09-18 11:48:25 | WARNING |   coefficient mismatch in ATAPL-58322-00005__20131023.csv
+2026-09-18 11:48:26 | WARNING |   coefficient mismatch in ATAPL-58322-00005__20160113.csv
+2026-09-18 11:48:26 | WARNING |   coefficient mismatch in ATAPL-58322-00005__20171130.csv
+2026-09-18 11:48:27 | WARNING |   coefficient mismatch in ATAPL-58322-00005__20190906.csv
+2026-09-18 11:48:27 | WARNING |   coefficient mismatch in ATAPL-58322-00005__20211012.csv
+2026-09-18 11:48:28 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20140423.csv
+2026-09-18 11:48:29 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20160422.csv
+2026-09-18 11:48:29 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20170126.csv
+2026-09-18 11:48:31 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20171128.csv
+2026-09-18 11:48:31 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20190918.csv
+2026-09-18 11:48:32 | WARNING |   coefficient mismatch in ATAPL-58322-00006__20201013.csv
+2026-09-18 11:48:33 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20140423.csv
+2026-09-18 11:48:34 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20160422.csv
+2026-09-18 11:48:34 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20170116.csv
+2026-09-18 11:48:35 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20171129.csv
+2026-09-18 11:48:36 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20190906.csv
+2026-09-18 11:48:36 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20201008.csv
+2026-09-18 11:48:37 | WARNING |   coefficient mismatch in ATAPL-58322-00007__20221028.csv
+2026-09-18 11:48:37 | WARNING |   coefficient mismatch in ATAPL-58322-00009__20150416.csv
+2026-09-18 11:48:38 | WARNING |   coefficient mismatch in ATAPL-58322-00009__20170224.csv
+2026-09-18 11:48:38 | WARNING |   coefficient mismatch in ATAPL-58322-00009__20180924.csv
+2026-09-18 11:48:39 | WARNING |   coefficient mismatch in ATAPL-58322-00009__20201005.csv
+2026-09-18 11:48:40 | WARNING |   coefficient mismatch in ATAPL-58322-00010__20150409.csv
+2026-09-18 11:48:41 | WARNING |   coefficient mismatch in ATAPL-58322-00010__20170217.csv
+2026-09-18 11:48:41 | WARNING |   coefficient mismatch in ATAPL-58322-00010__20180924.csv
+2026-09-18 11:48:43 | WARNING |   coefficient mismatch in ATAPL-58322-00010__20201012.csv
+2026-09-18 11:48:43 | WARNING |   coefficient mismatch in ATAPL-58322-00010__20221028.csv
+2026-09-18 11:48:44 | WARNING |   coefficient mismatch in ATAPL-58322-00011__20150416.csv
+2026-09-18 11:48:45 | WARNING |   coefficient mismatch in ATAPL-58322-00011__20170224.csv
+2026-09-18 11:48:46 | WARNING |   coefficient mismatch in ATAPL-58322-00011__20180926.csv
+2026-09-18 11:48:46 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20150429.csv
+2026-09-18 11:48:47 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20170224.csv
+2026-09-18 11:48:47 | INFO    |   600/1174 cal files
+2026-09-18 11:48:47 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20180924.csv
+2026-09-18 11:48:48 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20201007.csv
+2026-09-18 11:48:48 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20221028.csv
+2026-09-18 11:48:50 | WARNING |   coefficient mismatch in ATAPL-58322-00014__20191118.csv
+2026-09-18 11:48:50 | WARNING |   coefficient mismatch in ATAPL-58322-00014__20211115.csv
+2026-09-18 11:48:51 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20140130.csv
+2026-09-18 11:48:52 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20160114.csv
+2026-09-18 11:48:52 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20171201.csv
+2026-09-18 11:48:53 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20190905.csv
+2026-09-18 11:48:53 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20211001.csv
+2026-09-18 11:48:54 | WARNING |   coefficient mismatch in ATOSU-58322-00008__20221028.csv
+2026-09-18 11:48:55 | WARNING |   coefficient mismatch in ATOSU-58322-00013__20150528.csv
+2026-09-18 11:48:55 | WARNING |   coefficient mismatch in ATOSU-58322-00013__20181008.csv
+2026-09-18 11:48:56 | WARNING |   coefficient mismatch in ATOSU-58322-00013__20201012.csv
+2026-09-18 11:48:56 | WARNING |   coefficient mismatch in ATOSU-58322-00013__20221028.csv
+2026-09-18 11:48:59 | WARNING |   coefficient mismatch in ATAPL-58322-00011__20170224.csv
+2026-09-18 11:48:59 | WARNING |   coefficient mismatch in ATAPL-58322-00012__20170224.csv
+2026-09-18 11:49:40 | INFO    |   700/1174 cal files
+2026-09-18 11:51:27 | INFO    |   800/1174 cal files
+2026-09-18 11:52:26 | INFO    |   900/1174 cal files
+2026-09-18 11:53:03 | INFO    |   1000/1174 cal files
+2026-09-18 11:53:37 | INFO    |   1100/1174 cal files
+2026-09-18 11:54:15 | INFO    | 
+  1172 cal files checked, 73 coefficient mismatches, 109 with no vendor file
+2026-09-18 11:54:15 | INFO    |   146 vendor files missing from asset-management
+2026-09-18 11:54:15 | INFO    | 
+=== deployment sheet checks ===
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58320-00002 in 2014 deployment 1: RS01SBPD-DP01A-06-DOSTAD104
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58320-00002 in 2014 deployment 1: RS03AXPS-PC03A-4A-DOSTAD303
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2014 deployment 1: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2014 deployment 1: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2015 deployment 2: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2015 deployment 2: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2016 deployment 3: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2016 deployment 3: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2017 deployment 4: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2017 deployment 4: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2018 deployment 5: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2018 deployment 5: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2019 deployment 6: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2019 deployment 6: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2021 deployment 7: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2021 deployment 7: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2022 deployment 8: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2022 deployment 8: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2023 deployment 9: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2023 deployment 9: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2024 deployment 10: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00002 in 2024 deployment 10: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2025 deployment 11: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00003 in 2025 deployment 11: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2026 deployment 12: RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:15 | WARNING |   duplicate assetID ATAPL-58340-00001 in 2026 deployment 12: RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:15 | INFO    | 
+=== deployment verification ===
+2026-09-18 11:54:15 | DEBUG   | no raw file listed for CE04OSBP-LJ01C-05-ADCPSI103 2026
+2026-09-18 11:54:15 | WARNING |   CE02SHBP-LJ01D-07-VEL3DC108: assetID ATAPL-69829-00003 is not in sensorBulk
+2026-09-18 11:54:15 | WARNING |   CE02SHBP-LJ01D-11-HYDBBA106: assetID ATAPL-58324-00014 is not in sensorBulk
+2026-09-18 11:54:15 | WARNING |   CE02SHBP-MJ01C-07-ZPLSCB101: serial number but no assetID
+2026-09-18 11:54:15 | WARNING |   CE02SHBP-MJ01C-08-CAMDSB107: assetID ATAPL-78437-0010B is not in sensorBulk
+2026-09-18 11:54:15 | WARNING |   CE04OSBP-LJ01C-07-VEL3DC107: serial 4940/8159 does not belong to ATOSU-69829-00004
+2026-09-18 11:54:15 | WARNING |   CE04OSBP-LJ01C-11-HYDBBA105: assetID ATAPL-58324-00015 is not in sensorBulk
+2026-09-18 11:54:15 | WARNING |   CE04OSBP-LV01C-06-CAMDSB106: assetID ATAPL-78437-0001A is not in sensorBulk
+2026-09-18 11:54:15 | WARNING |   RS03INT1-MJ03C-09-TRHPHA302: assetID ATAPL-70356-00005 is not in sensorBulk
+2026-09-18 11:54:16 | INFO    | 
+  35 deployments in 2026: 28 verified, 1 raw-SN possible, 6 not verified
+2026-09-18 11:54:16 | ERROR   | 
+  1 deployment/raw-file mismatches -- highest priority:
+2026-09-18 11:54:16 | ERROR   |       RS01SLBS-LJ01A-10-ADCPTE101    MISMATCH: raw: 23443:ATAPL-68073-00005
+2026-09-18 11:54:16 | ERROR   | 
+  6 deployment/image mismatches -- high priority:
+2026-09-18 11:54:16 | ERROR   |       RS03INT1-MJ03C-09-TRHPHA302    MISMATCH: image: nan deployment:ATAPL-67653-00004
+2026-09-18 11:54:16 | ERROR   |       RS03INT1-MJ03C-07-RASFLA301    MISMATCH: image: nan deployment:ATAPL-58340-00001
+2026-09-18 11:54:16 | ERROR   |       RS03INT1-MJ03C-07-PPSDNA301    MISMATCH: image: nan deployment:ATAPL-58338-00001
+2026-09-18 11:54:16 | ERROR   |       RS03INT1-MJ03C-07-D1000A301    MISMATCH: image: nan deployment:ATAPL-58340-00001
+2026-09-18 11:54:16 | ERROR   |       CE02SHBP-LJ01D-11-HYDBBA106    MISMATCH: image: ATAPL-69943-00008 deployment:ATOSU-58324-00014
+2026-09-18 11:54:16 | ERROR   |       CE02SHBP-LJ01D-10-PHSENH110    MISMATCH: image: ATAPL-91990-00004 deployment:ATAPL-91990-00002
+2026-09-18 11:54:16 | WARNING | 
+  6 not verified by any route:
+2026-09-18 11:54:16 | WARNING |       RS03INT1-MJ03C-09-TRHPHA302
+2026-09-18 11:54:16 | WARNING |       RS03INT1-MJ03C-07-RASFLA301
+2026-09-18 11:54:16 | WARNING |       RS03INT1-MJ03C-07-PPSDNA301
+2026-09-18 11:54:16 | WARNING |       RS03INT1-MJ03C-07-D1000A301
+2026-09-18 11:54:16 | WARNING |       CE02SHBP-LJ01D-11-HYDBBA106
+2026-09-18 11:54:16 | WARNING |       CE02SHBP-LJ01D-10-PHSENH110
+2026-09-18 11:54:16 | INFO    | 
+wrote /Users/joeduprey/repos/metadataVerification/assetManagement/reportOuts/deploymentVerification_20260918.csv
+2026-09-18 11:54:16 | INFO    | 
+next: work through deploymentVerification_20260918.csv by hand, starting with the mismatches above.
+Record decisions in 2i_HITL/2i_HITL_deploymentVerification.csv
