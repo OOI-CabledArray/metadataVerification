@@ -5,3 +5,13 @@ __pycache__
 .DS_Store
 # notebook scratch output (deployment history, vendor cal cache)
 tmp/
+
+# written into the cwd by the python2 mi-racle playback, normally cleaned up
+# by metadataFunctions but left behind if a run dies mid-parse
+mi-drivers.log
+adcp_*.csv
+optaa_*.csv
+
+# per-run logs written beside each script's output
+assetManagement/params/rawFileSN_*.log
+assetManagement/inputs/imageSN_*.log
