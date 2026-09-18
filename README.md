@@ -1,5 +1,18 @@
 # metadataVerification
-Metadata verification scripts for OOI RCA. 
+Metadata verification scripts for OOI RCA.
+
+Run once a year after the summer cruise, in order, from `assetManagement/scripts`:
+
+| | |
+|---|---|
+| `extract_raw_sn.py` | mine serial numbers from the raw data archive (~1 hr) |
+| `draft_image_sn.py` | list the deployments no raw file could verify |
+| `find_deployment_photos.py` | find candidate cruise photos for those instruments |
+| `fuzzy_match_sn.py` | match photographed serial numbers to assetIDs |
+| `verify_metadata.py` | final verification and report outs |
+
+Each takes `--help`, logs the inputs it resolved before doing any work, and writes a run
+log next to its output. The notebooks they replaced are kept for reference.
 
 ---------------
 ### environments
@@ -86,26 +99,39 @@ Fill in `imageFile`, `imageSerialNumber` and `imageAssetID` from the photos, and
 instruments you do not image-verify. Leave a row blank if the label is not legible; blanks are
 carried through and resolved at final review.
 
-The filled-in draft is the input to `fuzzyMatchSNandAssetID.ipynb`, which reads it from `inputs/`
-in place -- set `current_year` in that notebook to the year you are working on. Also copy it to
-`params/imageSN_YYYY.csv`, which is what `criticalMetaDataVerification.ipynb` reads in the final
-step.
+`fuzzy_match_sn.py` reads the filled-in draft from `inputs/` in place. Also copy it to
+`params/imageSN_YYYY.csv`, which `verify_metadata.py` reads in the final step.
 
 
-`fuzzyMatchSNandAssetID.ipynb` contains a script to match these serial numbers - 
-including partial matches. If no matching serial number is found the script will attempt to match asset ids from the 
-master list/manufacturer serial number csv to image asset ids. This outputs a CSV that sometimes contains multiple assetID
-matches. We go through this output csv `fuzzyMatches_HITL_date.csv` by hand to create a HITL curated column of assetID 
-matches. 
+`fuzzy_match_sn.py` matches these serial numbers, including partial matches. If no matching
+serial number is found it attempts to match asset ids from the master list to image asset ids.
+Every single-candidate match is also checked against the deployment sheet, and disagreements
+are called out as the highest priority finding.
+
+The output `fuzzyMatches_HITL_YYYYMMDD.csv` sometimes contains multiple candidate assetIDs, so
+we go through it by hand. Pare **both** `matching_asset_ids` and `matching_mfg_sn` down to a
+single value each, keeping the `['...']` bracket form -- the next step strips the brackets and
+a multi-value cell strips to garbage.
 
 ----------
 ### final verification
-`fuzzyMatches_HITL_data.csv` can now serve as input to the final part of `criticalMetaDataVerification.ipynb` which loops through
-each deployment for each instrument, checking raw files verification and image verification status. In 2023 we also added logic to check
-if instruments require calibration and if instruments can be verified via raw file. This should help prioritize in the final HITL step.
+The curated `fuzzyMatches_HITL_YYYYMMDD.csv` is the input to `verify_metadata.py`, which loops
+through each deployment for each instrument, checking raw file and image verification status. It
+also checks whether instruments require calibration and whether they can be verified via raw
+file, which helps prioritise the final HITL step.
 
-**NOTE** If running `criticalMetaDataVerification.ipynb` locally make sure that all your local asset management repos: `deployments`,
-`asset-management` and `deployments` are up to date with the remotes.
+```
+./verify_metadata.py --dry-run     # confirm which inputs resolved
+./verify_metadata.py
+./verify_metadata.py --skip-cal    # deployment pass only, skips fetching vendor cal files
+```
+
+It picks the newest `rawFileSN_*.csv`, `imageSN_<year>.csv` and `fuzzyMatches_HITL_*.csv` and
+prints all three before starting; `--raw-input`, `--image-sn` and `--fuzzy-hitl` override.
+
+**NOTE** By default it reads the github repos, verifying what CI has ingested. Use `--local` for
+a pre-cruise check against changes not yet pushed, and make sure your `asset-management` and
+`calibrationFiles` clones are up to date with the remotes.
 
 In the final step we manually go through `deploymentVerification_YYYYMMDD.csv` and investigate instances where there is a deployment-raw file 
 mismatch (highest priority) and where there is a deployment-image mismatch (high priority). 
